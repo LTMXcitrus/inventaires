@@ -126,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "ng-inventaires"
+  "defaultProject": "ng-inventaires",
+  "cli": {
+    "analytics": false
+  }
 }
