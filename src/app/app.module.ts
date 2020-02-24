@@ -11,6 +11,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {FullDpsComponent} from './dps/full-dps/full-dps.component';
 import {PapsComponent} from './dps/paps/paps.component';
 import {BreadcrumbsComponent} from './breadcrumbs/breadcrumbs.component';
+import {ContainerComponent} from './container/container.component';
 
 const appRoutes: Routes = [
   {
@@ -27,7 +28,18 @@ const appRoutes: Routes = [
         data: {breadcrumb: 'Type de DPS'},
         children: [
           {path: '', component: DpsComponent, data: {breadcrumb: null}},
-          {path: 'paps', component: PapsComponent, data: {breadcrumb: 'PAPS'}},
+          {
+            path: 'paps',
+            data: {breadcrumb: 'PAPS'},
+            children: [
+              {
+                path: '', component: PapsComponent, data: {breadcrumb: null},
+              },
+              {
+                path: '**', component: ContainerComponent, data: {breadcrumb: 'param'}
+              }
+            ]
+          },
           {path: 'lotA', component: FullDpsComponent, data: {breadcrumb: 'DPS'}}
         ]
       },
@@ -45,7 +57,8 @@ const appRoutes: Routes = [
     HomeComponent,
     FullDpsComponent,
     PapsComponent,
-    BreadcrumbsComponent
+    BreadcrumbsComponent,
+    ContainerComponent
   ],
   imports: [
     BrowserModule,

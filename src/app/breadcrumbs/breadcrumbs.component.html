@@ -1,5 +1,8 @@
-<div class="nav-wrapper">
-  <div class="col s12">
-    <a *ngFor="let breadcrumb of breadcrumbs" href="javascript:void(0)" [routerLink]="breadcrumb.url" class="breadcrumb">{{breadcrumb.label}}</a>
+<div class="container">
+  <div class="nav-wrapper">
+    <div class="col s12">
+      <a *ngFor="let breadcrumb of breadcrumbs" href="javascript:void(0)" [routerLink]="breadcrumb.url"
+         class="breadcrumb">{{breadcrumb.label}}</a>
+    </div>
   </div>
 </div>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {LotPaps} from '../../data/lot-local';
 
 @Component({
   selector: 'app-paps',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PapsComponent implements OnInit {
 
-  constructor() { }
+  lot = LotPaps;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

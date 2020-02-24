@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="collection">
+    <ng-container *ngFor="let element of container.elements">
+      <ng-template [ngIf]="element.id">
+        <a
+          href="javascript:void(0)"
+          class="collection-item red-text"
+          routerLink="/dps/paps/container"
+          [queryParams]="{id: element.id}"
+        >
+          {{element.label}}
+        </a>
+      </ng-template>
+      <ng-template [ngIf]="!element.id">
+        <li class="collection-item red-text">
+          {{element.label}}
+          <span *ngIf="element.quantity" class="secondary-content new badge">
+            {{element.quantity}}
+          </span>
+        </li>
+      </ng-template>
+    </ng-container>
+  </div>
+</div>

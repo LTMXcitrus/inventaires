@@ -5,3 +5,6 @@ html, body {
 .mdi-96px.mdi-set, .mdi-96px.mdi:before {
   font-size: 96px;
 }
+li {
+  list-style-type: none;
+}

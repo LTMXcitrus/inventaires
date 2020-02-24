@@ -1,1 +1,13 @@
-<p>paps works!</p>
+<div class="container">
+  <div class="collection">
+    <a
+      *ngFor="let element of lot.elements"
+      href="javascript:void(0)"
+      class="collection-item red-text"
+      routerLink="/dps/paps/container"
+      [queryParams]="{id: element.id}"
+    >
+      {{element.label}}
+    </a>
+  </div>
+</div>

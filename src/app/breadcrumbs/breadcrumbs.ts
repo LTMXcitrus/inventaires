@@ -8,7 +8,6 @@ export interface Breadcrumbs {
 
 export const createBreadcrumbs = (route: ActivatedRoute, url: string, breadcrumbs: Breadcrumbs[] = []): Breadcrumbs[] => {
   const children: ActivatedRoute[] = route.children;
-  console.log(route.snapshot.data.breadcrumb)
 
   const routeUrl = route.snapshot.url.map(segment => segment.path).join('/');
   if (routeUrl !== '') {
@@ -25,3 +24,4 @@ export const createBreadcrumbs = (route: ActivatedRoute, url: string, breadcrumb
   }
   return createBreadcrumbs(children[0], url, breadcrumbs);
 };
+
