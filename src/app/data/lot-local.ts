@@ -14,7 +14,8 @@ const pocheAdministrativeLocal: Container = {
     element('Main courante'),
     element('Fiches de décharge'),
     element('Carnet traçabilité hygiène'),
-    element('Convention et ordre de mission')
+    element('Convention et ordre de mission'),
+    element('Fiche DSA')
   ]
 };
 
@@ -34,7 +35,8 @@ const sacO2Local: Container = {
         element('Sondes aspi enfant', 2),
         element('Boite de canules de guedel'),
         element('Tubulure O2', 1),
-        element('Raccord biconique', 1)
+        element('Raccord biconique', 1),
+        element('Stop-vide', 1)
       ]
     },
     {
@@ -51,17 +53,17 @@ const sacO2Local: Container = {
       label: 'Poche droite',
       elements: [
         element('BAVU adulte', 1),
-        element('BAVU enfant', 1),
-        element('BAVU nouveau-né', 1)
+        element('MHC adulte', 2),
+        element('lunettes O2', 2)
       ]
     },
     {
       id: 'sac-o2-local-poche-gauche',
       label: 'Poche gauche',
       elements: [
-        element('MHC adulte', 2),
         element('MHC enfant', 2),
-        element('lunettes O2', 2)
+        element('BAVU enfant', 1),
+        element('BAVU nouveau-né', 1)
       ]
     }
   ]
@@ -115,13 +117,11 @@ const sacInterLocal: Container = {
       elements: [
         element('Manugel'),
         element('Lampe torche'),
-        element('Gesco'),
         element('10 chlorhex', 10),
         element('10 sérum phy', 10),
         element('rouleau sparadrap', 1),
         element('Pansements prédécoupés'),
         element('Pince à écharde'),
-        element('Paire de petits ciseaux'),
       ]
     }, {
       id: 'sac-inter-local-kmu',
@@ -162,6 +162,8 @@ const sacInterLocal: Container = {
       label: 'Central 2',
       elements: [
         element('Rubalise'),
+        element('Gesco'),
+        element('Paire de petits ciseaux'),
         element('paires de Gants manutention', 2),
         element('écharpes triangulaires', 2),
         element('cold packs', 2)

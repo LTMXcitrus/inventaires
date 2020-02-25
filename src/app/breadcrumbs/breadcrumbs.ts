@@ -3,6 +3,7 @@ import {ActivatedRoute} from '@angular/router';
 export interface Breadcrumbs {
   url: string;
   label: string;
+  query?: string
 }
 
 

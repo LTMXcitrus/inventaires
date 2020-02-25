@@ -36,7 +36,7 @@ const appRoutes: Routes = [
                 path: '', component: PapsComponent, data: {breadcrumb: null},
               },
               {
-                path: '**', component: ContainerComponent, data: {breadcrumb: 'param'}
+                path: '**', component: ContainerComponent, data: {breadcrumb: null}
               }
             ]
           },
