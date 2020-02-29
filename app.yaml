@@ -7,7 +7,7 @@ skip_files:
 
 handlers:
   # Routing for bundles to serve directly
-  - url: /((?:inline|main|polyfills|styles|runtime|vendor|scripts)(\.|-)[a-z0-9]+\.js)
+  - url: /((?:inline|main|polyfills|styles|runtime|vendor|scripts)(-es2015\.|-es5\.|\.)[a-z0-9]+\.js)
     secure: always
     redirect_http_response_code: 301
     static_files: dist/\1
